@@ -6,45 +6,45 @@ Add JWT-based authentication to a Node/Express/Mongo app.
 * [x] Create Server
 * [x] Add auth router
 * [x] Create user with POST /auth/signup
-	* [x] validate required fields
-	* [x] Check if username is unique
-	* [x] hash password with bcrypt
-	* [x] insert into db
-* [x] Create Landing Page
-	* [x] Link to Sign Up Page
+	* [] validate required fields
+	* [] Check if username is unique
+	* [] hash password with bcrypt
+	* [] insert into db
+* [] Create Landing Page
+	* [] Link to Sign Up Page
 * [ ] Create Sign Up Page
-	* [x] Form with: username and password
-	* [x] When form is submitted
-		* [x] Validate username
-			* [x] Display errors
-		* [x] Validate password
-			* [x] Display errors
-		* [x] POST request to server
-			* [x] Display errors
-			* [x] If succesful sign up
-				* [x] Redirect to login page
+	* [] Form with: username and password
+	* [] When form is submitted
+		* [] Validate username
+			* [] Display errors
+		* [] Validate password
+			* [] Display errors
+		* [] POST request to server
+			* [] Display errors
+			* [] If succesful sign up
+				* [] Redirect to login page
 * [ ] Login user with POST /auth/login
-	* [x] validate the user
-	* [x] check if username in db
-		* [x] compare password with hashed password in db
-		* [x] Create and sign a JWT
-      * [x] Respond with JWT
-* [x] Create Login Page
-	* [x] Form with: username and password
-	* [x] When form is submitted
-		* [x] Validate username
-			* [x] Display errors
-		* [x] Validate password
-			* [x] Display errors
-		* [x] POST request to server /auth/login
-			* [x] Display errors
-			* [x] If succesful login
-				* [x] Store the token in localStorage
-				* [x] Redirect to the "dashboard"
-* [x] If a logged in user visits the signup or login page, redirect them to the dashboard
-* [x] If a non logged in user visits the dashboard, redirect to the login page
-* [x] After sign up, immediately login
-* [x] Show username on dashboard
+	* [] validate the user
+	* [] check if username in db
+		* [] compare password with hashed password in db
+		* [] Create and sign a JWT
+      * [] Respond with JWT
+* [] Create Login Page
+	* [] Form with: username and password
+	* [] When form is submitted
+		* [] Validate username
+			* [] Display errors
+		* [] Validate password
+			* [] Display errors
+		* [] POST request to server /auth/login
+			* [] Display errors
+			* [] If succesful login
+				* [] Store the token in localStorage
+				* [] Redirect to the "dashboard"
+* [] If a logged in user visits the signup or login page, redirect them to the dashboard
+* [] If a non logged in user visits the dashboard, redirect to the login page
+* [] After sign up, immediately login
+* [] Show username on dashboard
 * [ ] On homepage, show go to dashboard button instead of signup/login button
 * [ ] If logged in:
 	* [ ] Show logout button in header
