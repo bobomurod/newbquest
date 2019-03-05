@@ -1,17 +1,25 @@
 const express = require('express');
-const morgan = require('morgan');
-const cors = require('cors');
+const volleyball = require('volleyball');
+
+//const morgan = require('morgan');
+//const cors = require('cors');
 
 const app = express();
 
-app.use(morgan('dev'));
-app.use(cors());
+const auth = require('./auth/index.js');
+
+app.use(volleyball);
+
+//app.use(morgan('dev'));
+//app.use(cors());
 
 app.get('/', (req, res) => {
   res.json({
-    message: '🦄🌈✨Hello World! 🌈✨🦄'
+    message: 'Hello World! '
   });
 });
+
+app.use('/auth', auth);
 
 function notFound(req, res, next) {
   res.status(404);

@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
