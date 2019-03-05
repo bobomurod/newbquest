@@ -1,14 +1,23 @@
 //const router = require('express').Router();
-const bodyParser = require('body-parser');
+
+const Joi = require('joi');
+
 
 const express = require('express');
 
 const router = express.Router();
+
+const schema = Joi.object().keys({
+    username: Joi.string().alphanum().min(2).max(30).required(),
+    password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
+    access_token: [Joi.string(), Joi.number()],
+    birthyear: Joi.number().integer().min(1900).max(2013),
+    email: Joi.string().email({ minDomainAtoms: 2 })
+}).with('username', 'birthyear').without('password', 'access_token');
+ 
+
 //const app = express()
 
-
-//app.use(bodyParser.json())
-//app.use(bodyParser.urlencoded( { extended: false } ))
 
 router.get('/', (req, res,)=>{
     res.json({
