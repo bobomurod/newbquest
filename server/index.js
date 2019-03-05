@@ -1,6 +1,6 @@
 const express = require('express');
 const volleyball = require('volleyball');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 
 //const morgan = require('morgan');
 //const cors = require('cors');
@@ -10,11 +10,13 @@ const app = express();
 const auth = require('./auth/index.js');
 
 app.use(volleyball);
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded( { extended: false } ))
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded( { extended: false } ))
 
 //app.use(morgan('dev'));
 //app.use(cors());
+
+app.use(express.json())
 
 app.get('/', (req, res) => {
   res.json({
