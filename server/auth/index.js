@@ -13,7 +13,7 @@ const schema = Joi.object().keys({
     username: Joi.string().regex(/(^[a-zA-Z0-9_]*$)/).min(2).max(30).required(),
     // username: Joi.string().alphanum().min(2).max(30).required(),
     // password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()
-    password: Joi.string().min(3).max(6).required()
+    password: Joi.string().trim().min(3).max(6).required()
 });
  
 
@@ -44,6 +44,7 @@ router.post('/signup', (req, res, next) => {
                         password: hashedPassword
                     };
                     users.insert(newUser).then(insertedUser => {
+                        delete insertedUser.password
                         res.json(insertedUser)
                     })
                 })
