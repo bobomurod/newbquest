@@ -3,7 +3,7 @@
 const Joi = require('joi');
 const db = require('../db/connection.js')
 const users = db.get('users');
-users.createIndex('username', { unique: true });
+users.createIndex('username', { unique: true });34
 
 const express = require('express');
 
@@ -26,18 +26,35 @@ router.get('/', (req, res,)=>{
     })
 });
 
-router.post('/signup', (req, res) => {
+router.post('/signup', (req, res, next) => {
     console.log(req.body)
     const result = Joi.validate(req.body, schema)
+
+    if (result.error === null) {
+        //make sure username is unique
+        users.findOne({
+            username: req.body.username
+        }).then(user => {
+            //if user is undefined, username is not in the db, otherwise, duplicate user detected
+            if (user == undefined) {
+                console.log('Username ' + req.body.username +' is unique in db');
+            } else {
+                console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
+                
+            }
+            res.json( user )
+        })
+    } else {
+        next(result.error);
+    }
+
     // res.json({
     //     user: req.body.username,
     //     password: req.body.password,
     //     message: "Creating user"
     // })
 
-    res.json(result)
 })
 
 module.exports = router;
-
 
