@@ -19,7 +19,7 @@ const schema = Joi.object().keys({
 
 //const app = express()
 
-
+// any rout in here is pre-pended with /auth
 router.get('/', (req, res,)=>{
     res.json({
         message: "hello from Auth"
@@ -38,10 +38,18 @@ router.post('/signup', (req, res, next) => {
             //if user is undefined, username is not in the db, otherwise, duplicate user detected
             if (user == undefined) {
                 console.log('Username ' + req.body.username +' is unique in db');
-                bcrypt.hash(req.body.password)
-                res.json({
-                    userid: user._id
+                bcrypt.hash(req.body.password, 12).then(hashedPassword => {
+                    const newUser = {
+                        username: req.body.username,
+                        password: hashedPassword
+                    };
+                    users.insert(newUser).then(insertedUser => {
+                        res.json(insertedUser)
+                    })
                 })
+                // res.json({
+                //     userid: user._id
+                // })
             } else {
                 console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
 
