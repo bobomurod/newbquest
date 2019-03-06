@@ -1,7 +1,9 @@
 //const router = require('express').Router();
 
 const Joi = require('joi');
-
+const db = require('../db/connection.js')
+const users = db.get('users');
+users.createIndex('username', { unique: true });
 
 const express = require('express');
 
@@ -37,3 +39,5 @@ router.post('/signup', (req, res) => {
 })
 
 module.exports = router;
+
+
