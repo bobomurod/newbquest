@@ -1,5 +1,5 @@
 //const router = require('express').Router();
-
+const bcrypt = require('bcryptjs');
 const Joi = require('joi');
 const db = require('../db/connection.js')
 const users = db.get('users');
@@ -38,11 +38,19 @@ router.post('/signup', (req, res, next) => {
             //if user is undefined, username is not in the db, otherwise, duplicate user detected
             if (user == undefined) {
                 console.log('Username ' + req.body.username +' is unique in db');
+                bcrypt.hash(req.body.password)
+                res.json({
+                    userid: user._id
+                })
             } else {
                 console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
-                
+
+                const error = new Error('Username exists, please choose another username');
+                next(error);
+                // res.json({
+                //     message: "Username exists, please choose another username"
+                // })
             }
-            res.json( user )
         })
     } else {
         next(result.error);
