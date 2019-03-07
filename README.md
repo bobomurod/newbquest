@@ -17,7 +17,7 @@ Add JWT-based authentication to a Node/Express/Mongo app.
 		* [] Create and sign a JWT
       * [] Respond with JWT
 * [] Create Landing Page
-	* [] Link to Sign Up Page
+	* [x] Link to Sign Up Page
 * [ ] Create Sign Up Page
 	* [] Form with: username and password
 	* [] When form is submitted
@@ -30,7 +30,7 @@ Add JWT-based authentication to a Node/Express/Mongo app.
 			* [] If succesful sign up
 				* [] Redirect to login page
 * [] Create Login Page
-	* [] Form with: username and password
+	* [x] Form with: username and password
 	* [] When form is submitted
 		* [] Validate username
 			* [] Display errors
