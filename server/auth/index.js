@@ -55,6 +55,7 @@ router.post('/signup', (req, res, next) => {
                 console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
 
                 const error = new Error('Username exists, please choose another username');
+                res.status(409)
                 next(error);
                 // res.json({
                 //     message: "Username exists, please choose another username"
@@ -62,6 +63,7 @@ router.post('/signup', (req, res, next) => {
             }
         })
     } else {
+        res.status(406)
         next(result.error);
     }
 

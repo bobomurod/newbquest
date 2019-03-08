@@ -1,6 +1,7 @@
 const express = require('express');
 const volleyball = require('volleyball');
 const bcrypt = require('bcryptjs')
+const cors = require('cors');
 //const bodyParser = require('body-parser');
 
 //const morgan = require('morgan');
@@ -12,6 +13,9 @@ const auth = require('./auth/index.js');
 const products = require('./products/index.js');
 
 app.use(volleyball);
+app.use(cors({
+  origin: 'http://localhost:8080'
+}));
 // app.use(bodyParser.json())
 // app.use(bodyParser.urlencoded( { extended: false } ))
 

@@ -67,18 +67,21 @@
 
 <script>
 
-// import Joi from 'Joi';
+import Joi from 'joi';
 
-// const schema = Joi.object().keys({
-//     username: Joi.string().regex(/(^[a-zA-Z0-9_]*$)/).min(2).max(30).required(),
-//     // username: Joi.string().alphanum().min(2).max(30).required(),
-//     // password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()
-//     password: Joi.string().trim().min(3).max(6).required(),
-//     confirmPassword: Joi.string().trim().min(3).max(6).required()
-// });
+const SIGNUP_URL = 'http://localhost:5000/auth/signup';
+
+const schema = Joi.object().keys({
+    username: Joi.string().regex(/(^[a-zA-Z0-9_]*$)/).min(2).max(30).required(),
+    // username: Joi.string().alphanum().min(2).max(30).required(),
+    // password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()
+    password: Joi.string().trim().min(3).max(6).required(),
+    confirmPassword: Joi.string().trim().min(3).max(6).required()
+});
 
 export default {
      name: 'Signup',
+     
      data: () => ({
        errorMessage: '',
        user: {
@@ -87,23 +90,63 @@ export default {
          confirmPassword: '',
        }
      }),
+
+     watch: {
+       user: {
+         handler() {
+           this.errorMessage = '';
+         },
+         deep: true,
+       }
+     },
+
      methods: {
        signup() {
+          this.errorMessage = '';
           if (this.validUser()) {
-            // send data to server ...
+            const body = {
+              username: this.user.username,
+              password: this.user.password,
+            };
+
+              fetch(SIGNUP_URL, {
+                method: 'POST',
+                body: JSON.stringify(body),
+                headers: {
+                  'content-type': 'application/json',
+                }
+              }).then(response => {
+                if (response.ok) {
+                  return response.json();
+                }
+                response.json().then(error => {
+                  throw new Error(error.message);
+                })
+              }).then(user => {
+                console.log(user);
+              }).catch(error => {
+                console.log(error);
+              })
           }         
        },
+
        validUser() {
           if (this.user.password !== this.user.confirmPassword) {
             this.errorMessage = 'Passwords must match';
             return false;
           }
-          // const result = Joi.validate(this.user, schema)
-          // if (result.error === null) {
-          //   return true;
-          // }
-          // console.log(result.error)
-          // return false
+          const result = Joi.validate(this.user, schema)
+          if (result.error === null) {
+            return true;
+          }
+          if (result.error.message.includes('username')) {
+            this.errorMessage = 'Username is invalid :('
+          } else {
+            this.errorMessage = 'Password is invalid';
+          }
+          console.log(result.error)
+            this.errorMessage = "Password must be longer than 8 characters and contain alphanumeric value. Please, be sure to input password that match with pattern: /(^[a-zA-Z0-9_+$)]/";
+          return false
 
        },
      },
