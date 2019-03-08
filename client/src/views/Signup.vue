@@ -81,7 +81,7 @@ const schema = Joi.object().keys({
 
 export default {
      name: 'Signup',
-     
+
      data: () => ({
        errorMessage: '',
        user: {
@@ -116,15 +116,18 @@ export default {
                   'content-type': 'application/json',
                 }
               }).then(response => {
-                if (response.ok) {
+                if (response.status === 200) {
+                  //console.log("response")
                   return response.json();
                 }
-                response.json().then(error => {
+                return response.json().then(error => {
                   throw new Error(error.message);
                 })
               }).then(user => {
+                this.errorMessage = 'happend'
                 console.log(user);
               }).catch(error => {
+                this.errorMessage = error.message;
                 console.log(error);
               })
           }         
