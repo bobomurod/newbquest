@@ -1,9 +1,11 @@
 <template>
     <div>
     <h1>Signup</h1>
+
     <div v-if="errorMessage" class="alert alert-danger" role="alert">
       {{ errorMessage }}
     </div>
+    
     <form class="w-50 p-3" @submit.prevent="signup"> 
   <div class="form-group">
     <label for="username">Username</label>
@@ -64,6 +66,17 @@
 </template>
 
 <script>
+
+// import Joi from 'Joi';
+
+// const schema = Joi.object().keys({
+//     username: Joi.string().regex(/(^[a-zA-Z0-9_]*$)/).min(2).max(30).required(),
+//     // username: Joi.string().alphanum().min(2).max(30).required(),
+//     // password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()
+//     password: Joi.string().trim().min(3).max(6).required(),
+//     confirmPassword: Joi.string().trim().min(3).max(6).required()
+// });
+
 export default {
      name: 'Signup',
      data: () => ({
@@ -85,6 +98,13 @@ export default {
             this.errorMessage = 'Passwords must match';
             return false;
           }
+          // const result = Joi.validate(this.user, schema)
+          // if (result.error === null) {
+          //   return true;
+          // }
+          // console.log(result.error)
+          // return false
+
        },
      },
 };

@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs')
 const app = express();
 
 const auth = require('./auth/index.js');
+const products = require('./products/index.js');
 
 app.use(volleyball);
 // app.use(bodyParser.json())
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', auth);
+app.use('/products', products);
 
 function notFound(req, res, next) {
   res.status(404);

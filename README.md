@@ -1,6 +1,6 @@
-# Auth for Newbs
+# Auth for Mido
 
-Add JWT-based authentication to a Node/Express/Mongo app.
+Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 
 ## Authentication
 * [x] Create Server
