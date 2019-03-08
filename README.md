@@ -78,3 +78,21 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 		* [x] Get all notes in DB with logged in users user_id
 * [x] List all notes on client
 	* [x] Render description with Markdown
+
+* [x] GET /api/v1/checking
+	* [] Checking shop name avalibilty
+	* [] 
+	* [] 
+
+
+
+
+
+git pull
+git add --all
+git commit -m "templates added or updated "
+git push -u mido
+
+
+
+
