@@ -36,7 +36,18 @@ router.post('/signup', (req, res, next) => {
             username: req.body.username
         }).then(user => {
             //if user is undefined, username is not in the db, otherwise, duplicate user detected
-            if (user == undefined) {
+            if (user) {
+
+                console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
+
+                const error = new Error('Username exists, please choose another username');
+                res.status(500)
+                next(error);
+                // res.json({
+                //     message: "Username exists, please choose another username"
+                // })
+                
+            } else {
                 console.log('Username ' + req.body.username +' is unique in db');
                 bcrypt.hash(req.body.password, 12).then(hashedPassword => {
                     const newUser = {
@@ -51,19 +62,10 @@ router.post('/signup', (req, res, next) => {
                 // res.json({
                 //     userid: user._id
                 // })
-            } else {
-                console.log('Username ' + req.body.username + ' is exist and an id is ' + user._id);
-
-                const error = new Error('Username exists, please choose another username');
-                res.status(409)
-                next(error);
-                // res.json({
-                //     message: "Username exists, please choose another username"
-                // })
             }
         })
     } else {
-        res.status(406)
+        res.status(422)
         next(result.error);
     }
 
