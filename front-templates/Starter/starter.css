@@ -1,0 +1,36 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic');
+body {
+  font-family: 'Roboto', sans-serif; !important
+  font-weight: 400;
+}
+h1 {
+  font-family: 'Roboto', sans-serif; !important
+}
+h2 {
+  font-family: 'Roboto', sans-serif; !important
+}
+p {
+  font-family: 'Roboto', sans-serif; !important
+}
+.card {
+  border: none;
+}
+.bg-light {
+  border: none;
+}
+.navbar-light .navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: 0; !important
+  box-shadow: none; !important
+}
+footer {
+  background-color: #c2c3c4;
+  height: 3em; !important
+}
+.footer-link {
+  margin-top: 2.5%; !important
+  color: #000;
+}
