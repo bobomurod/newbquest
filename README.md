@@ -10,10 +10,11 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 	* [x] Check if username is unique
 	* [x] hash password with bcrypt
 	* [x] insert into db
-* [ ] Login user with POST /auth/login
-	* [] validate the user
-	* [] check if username in db
-		* [] compare password with hashed password in db
+* [] Login user with POST /auth/login
+	* [x] validate the user
+	* [x] check if username in db
+		* [x] compare password with hashed password in db
+		* [] login attampts rate limiting 
 		* [] Create and sign a JWT
       * [] Respond with JWT
 * [] Create Landing Page
@@ -27,8 +28,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 			* [x] Display errors
 		* [x] POST request to server
 			* [x] Display errors
-			* [] If succesful sign up
-				* [] Redirect to login page
+			* [x] If succesful sign up
+				* [x] Redirect to login page
 * [] Create Login Page
 	* [x] Form with: username and password
 	* [] When form is submitted
@@ -51,33 +52,33 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 	* [ ] Show user icon and username in header
 
 ### Authorization:
-* [x] Visitors can only see the homepage
-	* [x] checkTokenSetUser middleware
-		* [x] get token from Authorization header
-			* [x] if defined ---
-				* [x] Verify the token with the token secret
-				* [x] Set req.user to be the decoded verified payload
-			* [x] else - move along
-	* [x] isLoggedIn middleware
-		* [x] if req.user is set - move along
-		* [x] else - send an unauthorized error message
-	* [x] redirect to login form
-* [x] Logged in users can only see their page
-* [x] Create notes form on client
-	* [x] Title
-	* [x] Description
-* [x] POST /api/v1/notes
-	* [x] Must be logged in
-	* [x] Logged in Users Can Create Notes
-		* [x] Title
-		* [x] Description -- markdown
-		* [x] Set user_id on server with logged in users id
-* [x] GET /api/v1/notes
-	* [x] Must be logged in
-	* [x] Logged in Users Can request all their notes 
-		* [x] Get all notes in DB with logged in users user_id
-* [x] List all notes on client
-	* [x] Render description with Markdown
+* [] Visitors can only see the homepage
+	* [] checkTokenSetUser middleware
+		* [] get token from Authorization header
+			* [] if defined ---
+				* [] Verify the token with the token secret
+				* [] Set req.user to be the decoded verified payload
+			* [] else - move along
+	* [] isLoggedIn middleware
+		* [] if req.user is set - move along
+		* [] else - send an unauthorized error message
+	* [] redirect to login form
+* [] Logged in users can only see their page
+* [] Create notes form on client
+	* [] Title
+	* [] Description
+* [] POST /api/v1/notes
+	* [] Must be logged in
+	* [] Logged in Users Can Create Notes
+		* [] Title
+		* [] Description -- markdown
+		* [] Set user_id on server with logged in users id
+* [] GET /api/v1/notes
+	* [] Must be logged in
+	* [] Logged in Users Can request all their notes 
+		* [] Get all notes in DB with logged in users user_id
+* [] List all notes on client
+	* [] Render description with Markdown
 
 * [x] GET /api/v1/checking
 	* [] Checking shop name avalibilty
@@ -91,7 +92,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 git pull
 git add --all
 git commit -m "templates added or updated "
-git push -u mido
+git push
 
 
 
