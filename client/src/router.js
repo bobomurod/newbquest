@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Signup from './views/Signup.vue';
 import Signout from './views/Signout.vue';
+import Signin from './views/Signin.vue';
 import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
 import Login from './views/Login.vue';
@@ -40,6 +41,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login,
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: Signin,
     },
   ],
 });
