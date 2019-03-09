@@ -2,11 +2,15 @@
     <div>
     <h1>Signup</h1>
 
+    <div v-if="signingUp">
+      <img src="../assets/pacman_loading.svg" >
+    </div>
+
     <div v-if="errorMessage" class="alert alert-danger" role="alert">
       {{ errorMessage }}
     </div>
     
-    <form class="w-50 p-3" @submit.prevent="signup"> 
+    <form v-if="!signingUp" class="w-50 p-3" @submit.prevent="signup"> 
   <div class="form-group">
     <label for="username">Username</label>
     <input
@@ -69,6 +73,8 @@
 
 import Joi from 'joi';
 
+import Pacman from '../assets/pacman_loading.svg'
+
 const SIGNUP_URL = 'http://localhost:5000/auth/signup';
 
 const schema = Joi.object().keys({
@@ -83,6 +89,7 @@ export default {
      name: 'Signup',
 
      data: () => ({
+       signingUp: false,
        errorMessage: '',
        user: {
          username: '',
@@ -108,7 +115,7 @@ export default {
               username: this.user.username,
               password: this.user.password,
             };
-
+              this.signingUp = true;
               fetch(SIGNUP_URL, {
                 method: 'POST',
                 body: JSON.stringify(body),
@@ -124,11 +131,17 @@ export default {
                   throw new Error(error.message);
                 })
               }).then(user => {
-                this.errorMessage = 'happend'
+                setTimeout(() => {
+                this.signingUp = true;
                 console.log(user);
+                this.$router.push('/login')
+                }, 1000);
               }).catch(error => {
+                setTimeout(() => {
+                this.signingUp = false;
                 this.errorMessage = error.message;
                 console.log(error);
+                }, 1000);
               })
           }         
        },
