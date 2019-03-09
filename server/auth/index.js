@@ -1,9 +1,10 @@
 //const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const Joi = require('joi');
-const db = require('../db/connection.js')
+const webToken = require('jsonwebtoken');
+const db = require('../db/connection.js');
 const users = db.get('users');
-users.createIndex('username', { unique: true });34
+users.createIndex('username', { unique: true });
 
 const express = require('express');
 
@@ -74,6 +75,43 @@ router.post('/signup', (req, res, next) => {
     //     password: req.body.password,
     //     message: "Creating user"
     // })
+
+})
+
+router.post('/login', (req, res, next) => {
+    const result = Joi.validate(req.body, schema)
+
+    if (result.error === null) {
+        users.findOne({
+            username: req.body.username
+        }).then(user => {
+            if (user) {
+                bcrypt
+                .compare(req.body.password, user.password)
+                .then(result => {
+                   if (result) {
+                       const payload = {
+                           _id: user._id,
+                           username: user.username
+                       };
+                       webToken.sign(payload, process.env.TOKEN_SECRET, {
+                           expiresIn: '1d'
+                       }, (err, token) => {
+                           res.json(token);
+                       })
+                   } else {
+                    const error = new Error('Password incorrect');
+                    res.status(422);
+                    next(error);
+                   }
+                })
+            } else {
+                const error = new Error('Unable to login');
+                res.status(422);
+                next(error);
+            }
+        })
+    }
 
 })
 
