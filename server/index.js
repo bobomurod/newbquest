@@ -2,6 +2,9 @@ const express = require('express');
 const volleyball = require('volleyball');
 const bcrypt = require('bcryptjs')
 const cors = require('cors');
+
+require('dotenv').config({path: './.env'});
+
 //const bodyParser = require('body-parser');
 
 //const morgan = require('morgan');
