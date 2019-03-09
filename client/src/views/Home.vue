@@ -12,6 +12,10 @@
       role="button"> Sign Up! </router-link>
     <router-link
       class="btn btn-primary btn-lg" 
+      :to="{name: 'signin'}" 
+      role="button"> Sign In! </router-link>
+    <router-link
+      class="btn btn-primary btn-lg" 
       :to="{name: 'createpage'}" 
       role="button"> Create page </router-link>
     
