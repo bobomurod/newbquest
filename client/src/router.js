@@ -5,6 +5,7 @@ import Signup from './views/Signup.vue';
 import Signout from './views/Signout.vue';
 import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
+import Login from './views/Login.vue';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/simplepage',
       name: 'simplepage',
       component: SimplePage,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
     },
   ],
 });
