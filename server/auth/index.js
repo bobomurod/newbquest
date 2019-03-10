@@ -97,7 +97,13 @@ router.post('/login', (req, res, next) => {
                        webToken.sign(payload, process.env.TOKEN_SECRET, {
                            expiresIn: '1d'
                        }, (err, token) => {
-                           res.json(token);
+                           if (err) {
+                            const error = new Error('Unable to login(token)');
+                            res.status(422);
+                            next(error);
+                        } else {
+                            res.json(token);
+                           }
                        })
                    } else {
                     const error = new Error('Password incorrect');
