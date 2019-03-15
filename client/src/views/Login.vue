@@ -10,7 +10,7 @@
       {{ errorMessage }}
     </div>
     
-    <form v-if="!signingIn" class="w-50 p-3" @submit.prevent="signin"> 
+    <form v-if="!signingIn" class="w-50 p-3" @submit.prevent="login"> 
   <div class="form-group">
     <label for="username">Username</label>
     <input
@@ -61,7 +61,7 @@ import Joi from 'joi';
 
 import Pacman from '../assets/pacman_loading.svg'
 
-const DASHBOARD_URL = 'http://localhost:5000/auth/dashboard';
+const LOGIN_URL = 'http://localhost:5000/auth/login';
 
 const schema = Joi.object().keys({
     username: Joi.string().regex(/(^[a-zA-Z0-9_]*$)/).min(2).max(30).required(),
@@ -71,7 +71,7 @@ const schema = Joi.object().keys({
 });
 
 export default {
-     name: 'Signin',
+     name: 'Login',
 
      data: () => ({
        signingIn: false,
@@ -92,7 +92,7 @@ export default {
      },
 
      methods: {
-       signin() {
+       login() {
           this.errorMessage = '';
           if (this.validUser()) {
             const body = {
@@ -100,7 +100,7 @@ export default {
               password: this.user.password,
             };
               this.signingIn = true;
-              fetch(DASHBOARD_URL, {
+              fetch(LOGIN_URL, {
                 method: 'POST',
                 body: JSON.stringify(body),
                 headers: {
