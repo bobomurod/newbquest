@@ -3,10 +3,10 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Signup from './views/Signup.vue';
 import Signout from './views/Signout.vue';
-import Signin from './views/Signin.vue';
+import Signin from './views/Login.vue';
 import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
-import Login from './views/Login.vue';
+import Login from './views/Dashboard.vue';
 
 Vue.use(Router);
 
@@ -38,13 +38,13 @@ export default new Router({
       component: SimplePage,
     },
     {
-      path: '/login',
-      name: 'login',
+      path: '/dashboard',
+      name: 'dashboard',
       component: Login,
     },
     {
-      path: '/signin',
-      name: 'signin',
+      path: '/login',
+      name: 'login',
       component: Signin,
     },
   ],
