@@ -1,0 +1,73 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&subset=cyrillic');
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.social-icons-header ul li {
+  list-style: none;
+  display: inline;
+}
+.social-icons-header ul a  {
+    color: #000;
+    padding-right: 0.5rem;
+    font-size:1.5rem;
+}
+.header-logo {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.right-side-header input {
+    width: 75%;
+    display: inline;
+}
+.right-side-header {
+  margin-top: 1rem;
+}
+.search-icon {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+.card-product {
+  padding: 1rem;
+}
+.card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-product .price-old {
+    color: #999;
+}
+.cart-button {
+  margin-top: 1rem;
+}
+.prod-cat {
+  color: gray;
+}
+.shop-title {
+  margin-top: 1rem;
+}
+.shop-desc {
+  margin-bottom: 1rem;
+}
