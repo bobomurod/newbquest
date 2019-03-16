@@ -2,7 +2,7 @@
     <div>
     <h1>Login</h1>
 
-    <div v-if="signingIn">
+    <div v-if="loggingIn">
       <img src="../assets/pacman_loading.svg" >
     </div>
 
@@ -74,7 +74,7 @@ export default {
      name: 'Login',
 
      data: () => ({
-       signingIn: false,
+       loggingIn: false,
        errorMessage: '',
        user: {
          username: '',
@@ -107,7 +107,7 @@ export default {
                   'content-type': 'application/json',
                 }
               }).then(response => {
-                if (response.status === 200) {
+                if (response.ok) {
                   //console.log("response")
                   return response.json();
                 }
