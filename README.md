@@ -37,8 +37,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 			* [x] Display errors
 		* [x] Validate password
 			* [x] Display errors
-		* [] POST request to server /auth/login
-			* [] Display errors
+		* [x] POST request to server /auth/login
+			* [x] Display errors
 			* [] If succesful login
 				* [] Store the token in localStorage
 				* [] Redirect to the "dashboard"

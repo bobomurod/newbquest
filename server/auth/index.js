@@ -102,7 +102,7 @@ router.post('/login', (req, res, next) => {
                             res.status(422);
                             next(error);
                         } else {
-                            res.json(token);
+                            res.json({"token": token});
                            }
                        })
                    } else {

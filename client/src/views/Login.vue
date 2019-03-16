@@ -10,7 +10,7 @@
       {{ errorMessage }}
     </div>
     
-    <form v-if="!signingIn" class="w-50 p-3" @submit.prevent="login"> 
+    <form v-if="!loggingIn" class="w-50 p-3" @submit.prevent="login"> 
   <div class="form-group">
     <label for="username">Username</label>
     <input
@@ -116,13 +116,14 @@ export default {
                 })
               }).then(user => {
                 setTimeout(() => {
-                this.signingIn = true;
+                this.loggingIn = true;
                 console.log(user);
+                localStorage.token = user.token;
                 this.$router.push('/dashboard')
                 }, 1000);
               }).catch(error => {
                 setTimeout(() => {
-                this.signingIn = false;
+                this.loggingIn = false;
                 this.errorMessage = error.message;
                 console.log(error);
                 }, 1000);
