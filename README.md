@@ -39,9 +39,9 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 			* [x] Display errors
 		* [x] POST request to server /auth/login
 			* [x] Display errors
-			* [] If succesful login
-				* [] Store the token in localStorage
-				* [] Redirect to the "dashboard"
+			* [x] If succesful login
+				* [x] Store the token in localStorage
+				* [x] Redirect to the "dashboard"
 * [] If a logged in user visits the signup or login page, redirect them to the dashboard
 * [] If a non logged in user visits the dashboard, redirect to the login page
 * [] After sign up, immediately login
