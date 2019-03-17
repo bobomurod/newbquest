@@ -50,10 +50,10 @@ export default new Router({
       name: 'dashboard',
       component: Dashboard,
       beforeEnter: (to, from, next) => {
-        if (!localStorage.token) {
-          next('/login');
-        } else {
+        if (localStorage.token) {
           next();
+        } else {
+          next('/login');
         }
       },
     },

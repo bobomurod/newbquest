@@ -99,7 +99,7 @@ export default {
               username: this.user.username,
               password: this.user.password,
             };
-              this.signingIn = true;
+              this.loggingIn = true;
               fetch(LOGIN_URL, {
                 method: 'POST',
                 body: JSON.stringify(body),

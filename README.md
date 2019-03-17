@@ -49,6 +49,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 * [ ] On homepage, show go to dashboard button instead of signup/login button
 * [ ] If logged in:
 	* [ ] Show logout button in header
+	* [x] Logout function
 	* [ ] Show user icon and username in header
 
 ### Authorization:
