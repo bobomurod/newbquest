@@ -10,6 +10,14 @@ import Dashboard from './views/Dashboard.vue';
 
 Vue.use(Router);
 
+function loggedIdRedirectDashboard(to, from, next) {
+  if (localStorage.token) {
+    next('/dashboard');
+  } else {
+    next();
+  }
+}
+
 export default new Router({
   routes: [
     {
@@ -21,6 +29,7 @@ export default new Router({
       path: '/signup',
       name: 'signup',
       component: Signup,
+      beforeEnter: loggedIdRedirectDashboard,
     },
     {
       path: '/signout',
@@ -41,11 +50,13 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+      beforeEnter: loggedIdRedirectDashboard,
     },
     {
       path: '/login',
       name: 'login',
       component: Login,
+      beforeEnter: loggedIdRedirectDashboard,
     },
   ],
 });
