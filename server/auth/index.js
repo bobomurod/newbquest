@@ -17,6 +17,27 @@ const schema = Joi.object().keys({
     password: Joi.string().trim().min(3).max(6).required()
 });
  
+const createTokenSendResponse = (user, res, next) => {
+    const payload = {
+        _id: user._id,
+        username: user.username
+    };
+
+    webToken.sign(payload, process.env.TOKEN_SECRET, {
+        expiresIn: '1d'
+    }, (err, token) => {
+        if (err) {
+            const error = new Error('Unable to login(token)');
+            res.status(422);
+            next(error);
+        } else {
+            res.json({
+                token
+            })
+        }
+    })
+}
+
 
 //const app = express()
 
@@ -56,8 +77,9 @@ router.post('/signup', (req, res, next) => {
                         password: hashedPassword
                     };
                     users.insert(newUser).then(insertedUser => {
-                        delete insertedUser.password
-                        res.json(insertedUser)
+                        createTokenSendResponse(insertedUser, res, next)
+                        // delete insertedUser.password
+                        // res.json(insertedUser)
                     })
                 })
                 // res.json({
@@ -77,6 +99,8 @@ router.post('/signup', (req, res, next) => {
     // })
 
 })
+
+
 
 router.post('/login', (req, res, next) => {
     const result = Joi.validate(req.body, schema)
