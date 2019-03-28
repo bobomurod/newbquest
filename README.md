@@ -17,11 +17,15 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 		* [] login attampts rate limiting 
 		* [x] Create and sign a JWT
       * [x] Respond with JWT
-* [] Create Landing Page
+* [x] Create Landing Page
 	* [x] Link to Sign Up Page
-* [ ] Create Sign Up Page
-	* [] Form with: username and password
-	* [] When form is submitted
+* [x] Create Sign Up Page
+	* [x] Form with: username and password
+	* [x] When form is submitted
+	* [x] Logout function
+	* [ ] Show user icon and username in header
+
+### Authorization:
 		* [x] Validate username
 			* [x] Display errors
 		* [x] Validate password
@@ -30,9 +34,9 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 			* [x] Display errors
 			* [x] If succesful sign up
 				* [x] Redirect to login page
-* [] Create Login Page
+* [x] Create Login Page
 	* [x] Form with: username and password
-	* [] When form is submitted
+	* [x] When form is submitted
 		* [x] Validate username
 			* [x] Display errors
 		* [x] Validate password
@@ -42,8 +46,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 			* [x] If succesful login
 				* [x] Store the token in localStorage
 				* [x] Redirect to the "dashboard"
-* [] If a logged in user visits the signup or login page, redirect them to the dashboard
-* [] If a non logged in user visits the dashboard, redirect to the login page
+* [x] If a logged in user visits the signup or login page, redirect them to the dashboard
+* [x] If a non logged in user visits the dashboard, redirect to the login page
 * [] After sign up, immediately login
 * [] Show username on dashboard
 * [ ] On homepage, show go to dashboard button instead of signup/login button
