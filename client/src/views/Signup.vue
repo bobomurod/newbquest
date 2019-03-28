@@ -131,6 +131,7 @@ export default {
                   throw new Error(error.message);
                 })
               }).then(user => {
+                localStorage.token = user.token
                 setTimeout(() => {
                 this.signingUp = true;
                 console.log(user);
