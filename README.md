@@ -90,7 +90,19 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 	* [] 
 	* [] 
 
+* [] Generating standalone shop with constructor
+	* [] Front-end
+		* [] Valid constructor
+			* [] Shopping cart constructor form
+				* [] Fields: Shop name, domain, min one item with price and photo, tel contacts message form
+			* [] "Buy" button and cart functionality
 
+	* [] Back-end
+		* [] Getting constructor data with POST method
+		* [] Store form data to MongoDB collection
+		* [] Generate virtual page with stored data
+		* [] Setup subdomain by shop name
+		* [] Simple warehouse functionality
 
 
 
