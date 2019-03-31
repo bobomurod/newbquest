@@ -8,8 +8,8 @@
 
 <script>
 export default {
-    name: 'simplepage'
-}
+  name: 'simplepage',
+};
 </script>
 
 <style>

@@ -7,18 +7,18 @@
   <p>We try our best make today better than yesterday.</p>
   <p class="lead">
     <router-link
-      class="btn btn-primary btn-lg" 
-      :to="{name: 'signup'}" 
+      class="btn btn-primary btn-lg"
+      :to="{name: 'signup'}"
       role="button"> Sign Up! </router-link>
     <router-link
-      class="btn btn-primary btn-lg" 
-      :to="{name: 'login'}" 
+      class="btn btn-primary btn-lg"
+      :to="{name: 'login'}"
       role="button"> Sign In! </router-link>
     <router-link
-      class="btn btn-primary btn-lg" 
-      :to="{name: 'createpage'}" 
+      class="btn btn-primary btn-lg"
+      :to="{name: 'createpage'}"
       role="button"> Create page </router-link>
-    
+
   </p>
 </div>
   </div>

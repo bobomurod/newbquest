@@ -6,7 +6,7 @@
   <p>Look, if you want to log back again, just press the button below.</p>
   <p class="lead">
     <router-link
-    class="btn btn-primary btn-lg" 
+    class="btn btn-primary btn-lg"
     :to="{ name: 'signup' }"
     role="button">Sign Up!</router-link>
   </p>
@@ -16,7 +16,7 @@
 <script>
 export default {
 
-}
+};
 </script>
 
 <style>
