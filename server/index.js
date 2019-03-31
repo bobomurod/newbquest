@@ -18,9 +18,9 @@ const app = express();
 const auth = require("./auth/index.js");
 const products = require("./products/index.js");
 
+app.use(volleyball);
 app.use(middlewares);
 
-app.use(volleyball);
 app.use(
   cors({
     origin: "http://localhost:8080"
