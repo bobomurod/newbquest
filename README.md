@@ -111,6 +111,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   _ [] Lock out accounts after too many login attamps
 - [] Password strength meter
 
+* [] reCaptcha for Signup/Login
+
 git pull
 git add --all
 git commit -m "templates added or updated "

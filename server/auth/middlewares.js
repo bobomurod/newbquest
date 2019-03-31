@@ -1,8 +1,9 @@
 function checkTokenSetUser(req, res, next) {
-  console.log("Ok, this is middleware");
-  console.log("i will run for every request comes to server");
-  console.log("if i call NEXT,  i will go to the next middleware");
+  const authHeader = req.get("authorization");
+  console.log(authHeader);
   next();
 }
 
-module.exports = checkTokenSetUser;
+module.exports = {
+  checkTokenSetUser
+};
