@@ -11,13 +11,13 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
       _ [x] Check if username is unique
       _ [x] hash password with bcrypt
       _ [x] insert into db
-- [] Login user with POST /auth/login
-  _ [x] validate the user
-  _ [x] check if username in db
-  _ [x] compare password with hashed password in db
-  _ [] login attampts rate limiting
-  _ [x] Create and sign a JWT
-  _ [x] Respond with JWT
+- [ ] Login user with POST /auth/login
+  - [x] validate the user
+  - [x] check if username in db
+  - [x] compare password with hashed password in db
+  - [ ] login attampts rate limiting
+  - [x] Create and sign a JWT
+  - [x] Respond with JWT
 - [x] Create Landing Page \* [x] Link to Sign Up Page
 - [x] Create Sign Up Page
       _ [x] Form with: username and password
@@ -50,7 +50,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 - [x] If a logged in user visits the signup or login page, redirect them to the dashboard
 - [x] If a non logged in user visits the dashboard, redirect to the login page
 - [x] After sign up, immediately login
-- [] Show username on dashboard
+- [ ] Show username on dashboard
 - [ ] On homepage, show go to dashboard button instead of signup/login button
 - [ ] If logged in:
       _ [ ] Show logout button in header
@@ -58,60 +58,61 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 
 ### Authorization:
 
-- [] Visitors can only see the homepage
-  _ [] checkTokenSetUser middleware
-  _ [] get token from Authorization header
-  _ [] if defined ---
-  _ [] Verify the token with the token secret
-  _ [] Set req.user to be the decoded verified payload
-  _ [] else - move along
-  _ [] isLoggedIn middleware
-  _ [] if req.user is set - move along
-  _ [] else - send an unauthorized error message
-  _ [] redirect to login form
-- [] Logged in users can only see their page
-- [] Create notes form on client
-  _ [] Title
-  _ [] Description
-- [] POST /api/v1/notes
-  _ [] Must be logged in
-  _ [] Logged in Users Can Create Notes
-  _ [] Title
-  _ [] Description -- markdown \* [] Set user_id on server with logged in users id
-- [] GET /api/v1/notes
-  _ [] Must be logged in
-  _ [] Logged in Users Can request all their notes \* [] Get all notes in DB with logged in users user_id
-- [] List all notes on client \* [] Render description with Markdown
+- [ ] Visitors can only see the homepage
+  - [ ] checkTokenSetUser middleware
+  - [ ] get token from Authorization header
+  - [ ] if defined ---
+  - [ ] Verify the token with the token secret
+  - [ ] Set req.user to be the decoded verified payload
+  - [ ] else - move along
+  - [ ] isLoggedIn middleware
+  - [ ] if req.user is set - move along
+  - [ ] else - send an unauthorized error message
+  - [ ] redirect to login form
+- [ ] Logged in users can only see their page
+- [ ] Create notes form on client
+  - [ ] Title
+  - [ ] Description
+- [ ] POST /api/v1/notes
+  - [ ] Must be logged in
+  - [ ] Logged in Users Can Create Notes
+  - [ ] Title
+  - [ ] Description -- markdown \* [ ] Set user\*id on server with logged in users id
+- [ ] GET /api/v1/notes
+  - [ ] Must be logged in
+  - [ ] Logged in Users Can request all their notes \* [ ] Get all notes in DB with logged in users user\*id
+- [ ] List all notes on client \* [ ] Render description with Markdown
 
 - [x] GET /api/v1/checking
-      _ [] Checking shop name avalibilty
-      _ [] \* []
+      _ [ ] Checking shop name avalibilty
+      _ [ ] \* [ ]
 
-- [] Generating standalone shop with constructor
-  _ [] Front-end
-  _ [] Valid constructor
-  _ [] Shopping cart constructor form
-  _ [] Fields: Shop name, domain, min one item with price and photo, tel contacts message form \* [] "Buy" button and cart functionality
+- [ ] Generating standalone shop with constructor
 
-      	* [] Back-end
-      		* [] Getting constructor data with POST method
-      		* [] Store form data to MongoDB collection
-      		* [] Generate virtual page with stored data
-      		* [] Setup subdomain by shop name
-      		* [] Simple warehouse functionality
+  - [ ] Front-end
+  - [ ] Valid constructor
+  - [ ] Shopping cart constructor form
+  - [ ] Fields: Shop name, domain, min one item with price and photo, tel contacts message form \* [ ] "Buy" button and cart functionality
+
+    _ [ ] Back-end
+    _ [ ] Getting constructor data with POST method
+    _ [ ] Store form data to MongoDB collection
+    _ [ ] Generate virtual page with stored data
+    _ [ ] Setup subdomain by shop name
+    _ [ ] Simple warehouse functionality
 
 ## Admin page
 
-- [] Admin page that list all users
-  _ [] Admin table with user_id
-  _ [] de activate users
-- [] Admin can see any page on site
-- [] Rate limiting
-  _ [] Prevent brute force logins
-  _ [] Lock out accounts after too many login attamps
-- [] Password strength meter
+- [ ] Admin page that list all users
+  - [ ] Admin table with user\*id
+  - [ ] de activate users
+- [ ] Admin can see any page on site
+- [ ] Rate limiting
+  - [ ] Prevent brute force logins
+  - [ ] Lock out accounts after too many login attamps
+- [ ] Password strength meter
 
-* [] reCaptcha for Signup/Login
+* [ ] reCaptcha for Signup/Login
 
 git pull
 git add --all
