@@ -19,7 +19,7 @@ const auth = require("./auth/index.js");
 const products = require("./products/index.js");
 
 app.use(volleyball);
-app.use(middlewares);
+app.use(middlewares.checkTokenSetUser);
 
 app.use(
   cors({
