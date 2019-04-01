@@ -18,7 +18,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] login attampts rate limiting
   - [x] Create and sign a JWT
   - [x] Respond with JWT
-- [x] Create Landing Page \* [x] Link to Sign Up Page
+- [x] Create Landing Page
+- [x] Link to Sign Up Page
 - [x] Create Sign Up Page
       _ [x] Form with: username and password
       _ [x] When form is submitted
@@ -46,7 +47,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
       _ [x] POST request to server /auth/login
       _ [x] Display errors
       _ [x] If succesful login
-      _ [x] Store the token in localStorage \* [x] Redirect to the "dashboard"
+      _ [x] Store the token in localStorage
+      \_ [x] Redirect to the "dashboard"
 - [x] If a logged in user visits the signup or login page, redirect them to the dashboard
 - [x] If a non logged in user visits the dashboard, redirect to the login page
 - [x] After sign up, immediately login
@@ -54,7 +56,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 - [ ] On homepage, show go to dashboard button instead of signup/login button
 - [ ] If logged in:
       _ [ ] Show logout button in header
-      _ [x] Logout function \* [ ] Show user icon and username in header
+      _ [x] Logout function
+      \_ [ ] Show user icon and username in header
 
 ### Authorization:
 
@@ -77,22 +80,26 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Must be logged in
   - [ ] Logged in Users Can Create Notes
   - [ ] Title
-  - [ ] Description -- markdown \* [ ] Set user\*id on server with logged in users id
+  - [ ] Description -- markdown
+        [ ] Set userid on server with logged in users id
 - [ ] GET /api/v1/notes
   - [ ] Must be logged in
-  - [ ] Logged in Users Can request all their notes \* [ ] Get all notes in DB with logged in users user\*id
-- [ ] List all notes on client \* [ ] Render description with Markdown
+  - [ ] Logged in Users Can request all their notes
+  - [ ] Get all notes in DB with logged in users userid
+- [ ] List all notes on client -
+- [ ] Render description with Markdown
 
 - [x] GET /api/v1/checking
       _ [ ] Checking shop name avalibilty
-      _ [ ] \* [ ]
+      _ [ ]
 
 - [ ] Generating standalone shop with constructor
 
   - [ ] Front-end
   - [ ] Valid constructor
   - [ ] Shopping cart constructor form
-  - [ ] Fields: Shop name, domain, min one item with price and photo, tel contacts message form \* [ ] "Buy" button and cart functionality
+  - [ ] Fields: Shop name, domain, min one item with price and photo, tel contacts message form
+  - [ ] "Buy" button and cart functionality
 
     _ [ ] Back-end
     _ [ ] Getting constructor data with POST method
@@ -104,7 +111,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 ## Admin page
 
 - [ ] Admin page that list all users
-  - [ ] Admin table with user\*id
+  - [ ] Admin table with userid
   - [ ] de activate users
 - [ ] Admin can see any page on site
 - [ ] Rate limiting
