@@ -48,7 +48,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
       _ [x] Display errors
       _ [x] If succesful login
       _ [x] Store the token in localStorage
-      \_ [x] Redirect to the "dashboard"
+      _ [x] Redirect to the "dashboard"
 - [x] If a logged in user visits the signup or login page, redirect them to the dashboard
 - [x] If a non logged in user visits the dashboard, redirect to the login page
 - [x] After sign up, immediately login
@@ -57,7 +57,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 - [ ] If logged in:
       _ [ ] Show logout button in header
       _ [x] Logout function
-      \_ [ ] Show user icon and username in header
+      _ [ ] Show user icon and username in header
 
 ### Authorization:
 
@@ -105,8 +105,11 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
     _ [ ] Getting constructor data with POST method
     _ [ ] Store form data to MongoDB collection
     _ [ ] Generate virtual page with stored data
-    _ [ ] Setup subdomain by shop name
-    _ [ ] Simple warehouse functionality
+    _ [ ] Setup subdomain by shop name 
+		_ [ ] Check subdomain is not busy
+    	_ [ ] Change HOSTS file
+    	_ [ ] Change NGINX configuration
+    	_ [ ] Simple warehouse functionality
 
 ## Admin page
 
