@@ -17,6 +17,7 @@ const app = express();
 
 const auth = require("./auth/index.js");
 const products = require("./products/index.js");
+const shops = require("./shops/index.js");
 
 app.use(volleyball);
 app.use(middlewares.checkTokenSetUser);
@@ -42,6 +43,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", auth);
 app.use("/products", products);
+app.use("/shops", shops);
 
 function notFound(req, res, next) {
   res.status(404);
