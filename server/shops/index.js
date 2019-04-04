@@ -1,7 +1,7 @@
 const db = require('../db/connection.js')
 const shops = db.get('shops');
-shops.createIndex('shopId', { unique: true });
-shops.createIndex('shopId', { unique: true });
+shops.createIndex('name', { unique: true });
+shops.createIndex('subdomain', { unique: true });
 
 const express = require('express');
 
@@ -13,7 +13,7 @@ router.get('/', (req, res,) => {
     })
 });
 
-router.post('/test', (req, res, next) => {
+router.post('/create', (req, res, next) => {
     shops.insert(req.body.shop).then(insertedShop => {
         res.json(insertedShop);
     })
@@ -21,6 +21,14 @@ router.post('/test', (req, res, next) => {
         res.send(err);
         next();
     })
+})
+
+router.post('/edit', (req, res, next) => {
+    //route for editing shop details
+})
+
+router.post('/admin', (req, res, next) => {
+    //route to admin shop
 })
 
 module.exports = router;

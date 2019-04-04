@@ -137,3 +137,13 @@ subdomain  - unique shop domain (subdmain)
 theme - name or number of theme selected by user
 about  -  text about shop
 contacts  -  merchant's contacts
+{
+        "shop": {
+                "name": "marketshop",
+                "title": "good market very best",
+                "subdomain": "marketshop"
+                "theme": "1"
+                "about": "We do our best to take your money",
+                "contacts": "tel:1232456454, email@email.com"
+        }
+}
