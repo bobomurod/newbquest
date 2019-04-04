@@ -23,6 +23,14 @@ router.post('/create', (req, res, next) => {
     })
 })
 
+router.get('/:name', (req, res, next) => {
+    shops.findOne({name: req.params.name}).then(shop => {
+        res.json(shop);
+    })
+})
+
+
+//надо закончить
 router.post('/edit', (req, res, next) => {
     //route for editing shop details
 })
