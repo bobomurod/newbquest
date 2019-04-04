@@ -124,7 +124,16 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 
 * [ ] reCaptcha for Signup/Login
 
-git pull
-git add --all
-git commit -m "templates added or updated "
-git push
+
+
+
+
+
+## Shops model in DB
+
+id  -  unique Base64 generated id
+name - unique shop name
+domain  - unique shop domain (subdmain)
+theme - name or number of theme selected by user
+about  -  text about shop
+contacts  -  merchant's contacts
