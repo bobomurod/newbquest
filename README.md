@@ -131,9 +131,9 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 
 ## Shops model in DB
 
-id  -  unique Base64 generated id
 name - unique shop name
-domain  - unique shop domain (subdmain)
+title  -  shop title
+subdomain  - unique shop domain (subdmain)
 theme - name or number of theme selected by user
 about  -  text about shop
 contacts  -  merchant's contacts
