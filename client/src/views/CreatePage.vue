@@ -1,16 +1,39 @@
 <template>
     <form>
   <fieldset>
-    <legend>Legend</legend>
+    <legend>Create shop</legend>
     <div class="form-group row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
-        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        <input 
+          v-model="shop.name"
+          type="text" 
+          class="form-control-plaintext" 
+          id="shopName" 
+          placeholder="your shop name"
+          required>
+      </div>
+      <div class="col-sm-10">
+        <input 
+          v-model="shop.title"
+          type="text" 
+          class="form-control-plaintext" 
+          id="shopName" 
+          placeholder="your shop name"
+          required>
+      </div>
+      <div class="col-sm-10">
+        <input 
+          v-model="shop.subdomain"
+          type="text" 
+          class="form-control-plaintext" 
+          id="shopName" 
+          placeholder="your shop name"
+          required>
       </div>
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
@@ -18,24 +41,9 @@
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
     <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
     </div>
     <div class="form-group">
-      <label for="exampleSelect2">Example multiple select</label>
-      <select multiple="" class="form-control" id="exampleSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      
     </div>
     <div class="form-group">
       <label for="exampleTextarea">Example textarea</label>
@@ -89,7 +97,15 @@
 
 <script>
 export default {
-
+  name: 'Create_shop',
+  data: () => ({
+    errorMessage: '',
+    shop: {
+      name: '',
+      title: '',
+      domain: '',
+    }
+  })
 }
 </script>
 
