@@ -96,6 +96,7 @@
 </template>
 
 <script>
+  const CREATE_SHOP_API ='http://localhost:5000/shops/create';
 export default {
   name: 'Create_shop',
   data: () => ({
@@ -108,7 +109,21 @@ export default {
   }),
   methods: {
     create() {
-      console.log("hello")
+      const body = {
+        shop: this.shop
+      }
+      fetch(CREATE_SHOP_API, {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            'content-type': 'application/json',
+          },
+      }).
+        then((response) => {
+          if(response.ok) {
+            console.log("created");
+          }
+        })
     }
   }
 }
