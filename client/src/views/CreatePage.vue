@@ -18,7 +18,7 @@
           type="text" 
           class="form-control-plaintext" 
           id="shopName" 
-          placeholder="your shop name"
+          placeholder="your shop title"
           required>
       </div>
       <div class="col-sm-10">
@@ -27,7 +27,7 @@
           type="text" 
           class="form-control-plaintext" 
           id="shopName" 
-          placeholder="your shop name"
+          placeholder="your shop subdomain"
           required>
       </div>
     </div>
