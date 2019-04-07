@@ -121,7 +121,7 @@ export default {
       }).
         then((response) => {
           if(response.ok) {
-            console.log("created");
+            console.log(response.json());
           }
         })
     }

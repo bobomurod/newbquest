@@ -39,8 +39,6 @@ const createTokenSendResponse = (user, res, next) => {
 }
 
 
-//const app = express()
-
 // any rout in here is pre-pended with /auth
 router.get('/', (req, res,)=>{
     res.json({
@@ -77,27 +75,17 @@ router.post('/signup', (req, res, next) => {
                         password: hashedPassword
                     };
                     users.insert(newUser).then(insertedUser => {
-                        createTokenSendResponse(insertedUser, res, next)
-                        // delete insertedUser.password
-                        // res.json(insertedUser)
+                        // createTokenSendResponse(insertedUser, res, next)
+                        res.json(insertedUser)
+
                     })
                 })
-                // res.json({
-                //     userid: user._id
-                // })
             }
         })
     } else {
         res.status(422)
         next(result.error);
     }
-
-    // res.json({
-    //     user: req.body.username,
-    //     password: req.body.password,
-    //     message: "Creating user"
-    // })
-
 })
 
 
