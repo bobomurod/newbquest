@@ -8,7 +8,13 @@
 
 <script>
 export default {
-
+    name: 'Example',
+    created(){
+        console.log('loaded')
+    },
+    mounted(){
+        console.log('mounted')
+    }
 }
 </script>
 

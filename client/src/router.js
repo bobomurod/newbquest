@@ -7,6 +7,7 @@ import Login from './views/Login.vue';
 import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
 import Dashboard from './views/Dashboard.vue';
+import Example from './views/Example.vue';
 
 Vue.use(Router);
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/simplepage',
       name: 'simplepage',
       component: SimplePage,
+    },
+    {
+      path: '/example',
+      name: 'example',
+      component: Example,
     },
     {
       path: '/dashboard',
