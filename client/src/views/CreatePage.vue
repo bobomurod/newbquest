@@ -120,10 +120,17 @@ export default {
           },
       }).
         then((response) => {
-          if(response.ok) {
-            console.log(response.json());
+          if (response.ok) {
+            return response.json();
+          } else {
+            return response.json().then((error) => {
+              throw new Error(error.message);
+            });
           }
-        })
+        }).
+          then((shop) => {
+            console.log(shop)
+          })
     }
   }
 }

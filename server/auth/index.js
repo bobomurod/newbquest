@@ -63,10 +63,6 @@ router.post('/signup', (req, res, next) => {
                 const error = new Error('Username exists, please choose another username');
                 res.status(500)
                 next(error);
-                // res.json({
-                //     message: "Username exists, please choose another username"
-                // })
-                
             } else {
                 console.log('Username ' + req.body.username +' is unique in db');
                 bcrypt.hash(req.body.password, 12).then(hashedPassword => {
@@ -75,8 +71,7 @@ router.post('/signup', (req, res, next) => {
                         password: hashedPassword
                     };
                     users.insert(newUser).then(insertedUser => {
-                        // createTokenSendResponse(insertedUser, res, next)
-                        res.json(insertedUser)
+                        createTokenSendResponse(insertedUser, res, next)
 
                     })
                 })
