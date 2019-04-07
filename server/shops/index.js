@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get('/', (req, res,) => {
     res.json({
-        message: "hello from Shops"
+        message: "Shops route"
     })
 });
 
@@ -18,8 +18,9 @@ router.post('/create', (req, res, next) => {
         res.json(insertedShop);
     })
      .catch((err) => {
-        res.send(err);
-        next();
+        const error = new Error('Maybe shop exists or your request havent required fields');
+        res.status(422);
+        next(error);
     })
 })
 
@@ -28,7 +29,6 @@ router.get('/:name', (req, res, next) => {
         res.json(shop);
     })
 })
-
 
 //надо закончить
 router.post('/edit', (req, res, next) => {
