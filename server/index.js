@@ -20,6 +20,7 @@ const products = require("./products/index.js");
 const shops = require("./shops/index.js");
 
 app.use(volleyball);
+app.use(express.json());
 app.use(middlewares.checkTokenSetUser);
 
 app.use(
@@ -33,11 +34,11 @@ app.use(
 //app.use(morgan('dev'));
 //app.use(cors());
 
-app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Hello World! "
+    message: "Hello World! ",
+    user: req.user
   });
 });
 
