@@ -29,5 +29,8 @@
 
 export default {
   name: 'home',
+  mounted(){
+    console.log(window.location)
+  }
 };
 </script>
