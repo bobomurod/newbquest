@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const middlewares = require("./auth/middlewares");
 
+require("dotenv").config({ path: process.env.ENV_FILE });
 require("dotenv").config({ path: "./.env" });
 
 //const bodyParser = require('body-parser');
