@@ -98,6 +98,11 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Show each user detailed
   - [ ] Update, Delete, Edit userinfo
 
+- [ ] Administration (Shops)
+  - [ ] Show shops
+  - [ ] Show each shop detailed
+  - [ ] Update, Delete, Edit shopinfo
+
 - [ ] Generating standalone shop with constructor
 
   - [ ] Front-end
