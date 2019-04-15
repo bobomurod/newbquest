@@ -127,6 +127,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
     _ [ ] Getting constructor data with POST method
     _ [ ] Store form data to MongoDB collection
     _ [ ] Uploading image functionality
+    _ [ ] Store image on disk
+    _ [ ] Store image path in db
     _ [ ] Generate virtual page with stored data
     _ [ ] Setup subdomain by shop name 
 		_ [ ] Check subdomain is not busy
