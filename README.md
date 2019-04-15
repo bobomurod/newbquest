@@ -91,12 +91,20 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
 
 - [x] GET /api/v1/checking
       _ [ ] Checking shop name avalibilty
-      _ [ ]
+        _ [ ] Show message if exists
+        _ [ ] Prompt create shop with this name if not allready exists
 
 - [ ] Dashboards
   - [ ] for user who buy
+    - [ ] Can see all shopping-history
+    - [ ] Can see shopping-cart
+    - [ ] Post message to seller
   - [ ] for users who sell
     - [ ] Edit profile
+      - [ ] Name, username, e-mail, phone number.
+      - [ ] Documents, ID-card, payment infromation
+      - [ ] Avatar image upload
+        - [ ] Generate if not setted
   - [ ] for admins
 
 - [ ] Administration (Users)
