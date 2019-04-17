@@ -104,6 +104,10 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Update, Delete, Edit shopinfo
 
 - [ ] Generating standalone shop with constructor
+  - [ ] Standalone constructor in Vue
+  - [ ] NGINX configuration to redirect SUBDOMAIN requests
+  - [ ] Catch subdomain in Vue and pass it to server
+  
 
 - [ ] Collection statistics
   - [ ] Sub task
