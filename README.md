@@ -107,26 +107,28 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Standalone constructor in Vue
   - [ ] NGINX configuration to redirect SUBDOMAIN requests
   - [ ] Catch subdomain in Vue and pass it to server
-  
 
-- [ ] Collection statistics
-  - [ ] Sub task
-
+- [ ] Reg (Store) shop in DB
   - [ ] Front-end
   - [ ] Valid constructor
   - [ ] Shopping cart constructor form
   - [ ] Fields: Shop name, domain, min one item with price and photo, tel contacts message form
   - [ ] "Buy" button and cart functionality
+  - [ ] Uploading image functionality
 
     _ [ ] Back-end
     _ [ ] Getting constructor data with POST method
     _ [ ] Store form data to MongoDB collection
+    _ [ ] Uploading image functionality
     _ [ ] Generate virtual page with stored data
     _ [ ] Setup subdomain by shop name 
 		_ [ ] Check subdomain is not busy
     	_ [ ] Change HOSTS file
     	_ [ ] Change NGINX configuration
     	_ [ ] Simple warehouse functionality
+
+- [ ] Collection statistics
+  - [ ] Sub task
 
 ## Admin page
 
