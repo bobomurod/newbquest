@@ -41,10 +41,10 @@
 </div>
 
 
-  <div class="form-group form-check">
+  <!-- <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Save me on this browser</label>
-  </div>
+  </div> -->
   <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
 </form>
       <router-link
