@@ -110,6 +110,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Use template from Saidalo
   - [ ] Build another template in Vuejs
 
+- [ ] Main screen change
+
 - [ ] Reg (Store) shop in DB
   - [ ] Front-end
   - [ ] Valid constructor
