@@ -107,6 +107,8 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Standalone constructor in Vue
   - [ ] NGINX configuration to redirect SUBDOMAIN requests
   - [ ] Catch subdomain in Vue and pass it to server
+  - [ ] Use template from Saidalo
+  - [ ] Build another template in Vuejs
 
 - [ ] Reg (Store) shop in DB
   - [ ] Front-end
