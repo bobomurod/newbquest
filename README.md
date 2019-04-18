@@ -97,11 +97,13 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Show users
   - [ ] Show each user detailed
   - [ ] Update, Delete, Edit userinfo
+  - [ ] Text search for users
 
 - [ ] Administration (Shops)
   - [ ] Show shops
   - [ ] Show each shop detailed
   - [ ] Update, Delete, Edit shopinfo
+  - [ ] Text search for shopname
 
 - [ ] Generating standalone shop with constructor
   - [ ] Standalone constructor in Vue
@@ -109,6 +111,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [ ] Catch subdomain in Vue and pass it to server
   - [ ] Use template from Saidalo
   - [ ] Build another template in Vuejs
+  - [ ] Search func
 
 - [ ] Main screen change
 
