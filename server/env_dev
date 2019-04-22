@@ -1,2 +1,3 @@
 TOKEN_SECRET=SECRET
 DB=localhost/mido_dev1
+PROD=false
