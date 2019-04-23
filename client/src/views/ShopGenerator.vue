@@ -10,11 +10,11 @@
 export default {
     name: 'Generator',
     data: () => ({
-        shopName: null
+        shopName: null,
     }),
     methods: {
         generate(){
-            console.log("Generating shop from db")
+            console.log("Generating shop " + this.shopName)
         }
     }
 }
