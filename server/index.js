@@ -1,4 +1,7 @@
 //bismillah
+// @author Saidalo Yodgorov  https://t.me/Saidalo1    https://github.com/robertocavalli
+// @coding Bobomurod Boboev  https://t.me/b0b0mur0d   https://github.com/bobomurod
+
 
 const express = require("express");
 const volleyball = require("volleyball");
