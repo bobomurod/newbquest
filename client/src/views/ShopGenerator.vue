@@ -2,7 +2,7 @@
     <div>
         <h1>Generating shoppp...</h1>
     <input type="text"></input>
-    <button v-on:click="generate" >hello</button>
+    <button v-on:click="generate" >Generate shop</button>
     </div>
 </template>
 
