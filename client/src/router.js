@@ -8,6 +8,7 @@ import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
 import Dashboard from './views/Dashboard.vue';
 import Example from './views/Example.vue';
+import ShopGenerator from './views/ShopGenerator.vue';
 
 Vue.use(Router);
 
@@ -50,6 +51,11 @@ export default new Router({
       path: '/example',
       name: 'example',
       component: Example,
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: ShopGenerator,
     },
     {
       path: '/dashboard',
