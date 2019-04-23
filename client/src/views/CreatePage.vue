@@ -1,4 +1,11 @@
 <template>
+  <div>
+     <div v-if="errorMessage" class="alert alert-danger" role="alert">
+      {{ errorMessage }}
+    </div>
+    <div v-if="succesMessage" class="alert alert-success" role="alert">
+      {{ succesMessage }}
+    </div>
     <form @submit.prevent="create">
   <fieldset>
     <legend>Create shop</legend>
@@ -47,7 +54,7 @@
     </div>
     <div class="form-group">
       <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      <textarea class="form-control" id="exampleTextarea" v-model="shop.about" rows="3"></textarea>
     </div>
     <div class="form-group">
       <label for="exampleInputFile">File input</label>
@@ -93,6 +100,7 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
 </form>
+  </div>
 </template>
 
 <script>
@@ -101,10 +109,12 @@ export default {
   name: 'Create_shop',
   data: () => ({
     errorMessage: '',
+    succesMessage: '',
     shop: {
       name: '',
       title: '',
       domain: '',
+      about: '',
     }
   }),
   methods: {
@@ -124,11 +134,13 @@ export default {
             return response.json();
           } else {
             return response.json().then((error) => {
+              this.errorMessage = error;
               throw new Error(error.message);
             });
           }
         }).
           then((shop) => {
+            this.succesMessage = "Shop created"
             console.log(shop)
           })
     }
