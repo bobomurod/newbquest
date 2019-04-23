@@ -15,7 +15,13 @@ import HelloWorld from '@/components/HelloWorld.vue';
 export default {
   name: 'home',
   data: ()=> ({
-    host: window.location.host.split('.')
+    host: window.location.host.split('.'),
+    shop: {
+      name: null,
+      title: null,
+      about: null,
+      products: [],
+    }
       }),
   components: {
     HelloWorld,
