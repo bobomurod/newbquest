@@ -9,6 +9,9 @@
 <script>
 export default {
     name: 'Generator',
+    data: () => ({
+        shopName: null
+    }),
     methods: {
         generate(){
             console.log("Generating shop from db")
