@@ -7,6 +7,9 @@
 </template>
 
 <script>
+
+const API_URl = 'http://localhost:5000/shops/'
+
 export default {
     name: 'Generator',
     data: () => ({
@@ -14,7 +17,11 @@ export default {
     }),
     methods: {
         generate(){
-            console.log("Generating shop " + this.shopName)
+            fetch(API_URl + this.shopName)
+                .then(raw_result => raw_result.json())
+                .then(result => {
+                    console.log(result)
+                })
         }
     }
 }
