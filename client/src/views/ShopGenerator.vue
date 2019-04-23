@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Generating shoppp...</h1>
-    <input type="text"></input>
+    <input type="text" v-model="shopName" ></input>
     <button v-on:click="generate" >Generate shop</button>
     </div>
 </template>
