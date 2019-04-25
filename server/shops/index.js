@@ -24,8 +24,8 @@ router.post('/create', (req, res, next) => {
     })
 })
 
-router.get('/:name', (req, res, next) => {
-    shops.findOne({name: req.params.name}).then(shop => {
+router.get('/:subdomain', (req, res, next) => {
+    shops.findOne({subdomain: req.params.subdomain}).then(shop => {
         res.json(shop);
     })
 })
