@@ -127,6 +127,7 @@ export default {
         body: JSON.stringify(body),
         headers: {
             'content-type': 'application/json',
+             authorization: `Bearer ${localStorage.token}`
           },
       }).
         then((response) => {
