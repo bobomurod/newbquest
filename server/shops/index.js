@@ -14,7 +14,10 @@ router.get('/', (req, res,) => {
 });
 
 router.post('/create', (req, res, next) => {
-    shops.insert(req.body.shop).then(insertedShop => {
+    var shop = req.body.shop;
+    shop.owner_username = req.user.username;
+    shop.owner_id = req.user._id;
+    shops.insert(shop).then(insertedShop => {
         res.json(insertedShop);
     })
      .catch((err) => {
