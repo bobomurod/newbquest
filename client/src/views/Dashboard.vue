@@ -4,7 +4,7 @@
         <!-- <h1 v-if="!user"> Requesting... </h1> -->
         <h1>Hello {{user.username}}</h1>
         <form action="">
-
+          
         </form>
       <button
       class="btn btn-primary btn-lg"
