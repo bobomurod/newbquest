@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link class="navbar-brand" :to="{ name: 'home' }">App Home</router-link>
+      <router-link class="navbar-brand" :to="{ name: 'home' }">Mido Admin</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,6 +16,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" :to="{name: 'userlist'}">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
