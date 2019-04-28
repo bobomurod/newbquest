@@ -1,5 +1,6 @@
 const db = require('../db/connection.js')
 const shops = db.get('shops');
+const users = db.get('users');
 shops.createIndex('name', { unique: true });
 shops.createIndex('subdomain', { unique: true });
 
@@ -35,7 +36,17 @@ router.get('/:subdomain', (req, res, next) => {
 
 //надо закончить
 router.post('/edit', (req, res, next) => {
-    //route for editing shop details
+    shops.findOne({
+        owner_username: req.user.username
+    })
+     .then(doc => {
+         if (doc) {
+             res.json(doc)
+         } else {
+             res.status(404);
+             next();
+         }
+     })
 })
 
 router.post('/admin', (req, res, next) => {
