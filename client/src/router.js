@@ -8,6 +8,7 @@ import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
 import Dashboard from './views/Dashboard.vue';
 import Example from './views/Example.vue';
+import Example from './views/UserList.vue';
 import ShopGenerator from './views/ShopGenerator.vue';
 
 Vue.use(Router);
