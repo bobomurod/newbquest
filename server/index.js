@@ -29,7 +29,7 @@ app.use(middlewares.checkTokenSetUser);
 
 app.use(
   cors({
-    origin: ["http://localhost:8080", "http://route1.myapp.local:8081"]
+    origin: ["http://localhost:8080", "http://route1.myapp.local:8081", "http://localhost:8082"]
   })
 );
 // app.use(bodyParser.json())
