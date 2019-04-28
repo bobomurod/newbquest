@@ -98,7 +98,7 @@ router.post('/login', (req, res, next) => {
                    if (result) {
                        const payload = {
                            _id: user._id,
-                           username: user.username
+                           username: user.username,
                        };
                        webToken.sign(payload, process.env.TOKEN_SECRET, {
                            expiresIn: '1d'
@@ -125,6 +125,13 @@ router.post('/login', (req, res, next) => {
         })
     }
 
+})
+
+router.post('/userinfo', (req, res, next) => {
+    users.findOne({
+        username: req.user.username
+    })
+     .then(result => {delete result.password; res.json(result)})
 })
 
 module.exports = router;
