@@ -18,7 +18,7 @@
               <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{name: 'userlist'}">Users</router-link>
+              <router-link class="nav-link" :to="{name: 'userslist'}">Users</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
