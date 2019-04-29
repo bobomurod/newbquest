@@ -22,6 +22,7 @@ const app = express();
 const auth = require("./auth/index.js");
 const products = require("./products/index.js");
 const shops = require("./shops/index.js");
+const shops = require("./users/index.js");
 
 app.use(volleyball);
 app.use(express.json());
