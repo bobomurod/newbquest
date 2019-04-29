@@ -8,7 +8,7 @@ import CreatePage from './views/CreatePage.vue';
 import SimplePage from './views/SimplePage.vue';
 import Dashboard from './views/Dashboard.vue';
 import Example from './views/Example.vue';
-import UserList from './views/UserList.vue';
+import UsersList from './views/UsersList.vue';
 import ShopGenerator from './views/ShopGenerator.vue';
 
 Vue.use(Router);
@@ -45,8 +45,8 @@ export default new Router({
     },
     {
       path: '/users',
-      name: 'userlist',
-      component: UserList,
+      name: 'userslist',
+      component: UsersList,
     },
     {
       path: '/simplepage',
