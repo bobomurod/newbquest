@@ -49,6 +49,8 @@ app.get("/", (req, res) => {
 app.use("/auth", auth);
 app.use("/products", products);
 app.use("/shops", shops);
+app.use("/users", users);
+
 
 function notFound(req, res, next) {
   res.status(404);
