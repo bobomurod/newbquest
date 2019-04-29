@@ -82,6 +82,9 @@
   </template>
 
 <script>
+
+const GETUSERS_API_URL = 'http://localhost:8081/getAllUsers'
+
 export default {
     name: 'userslist',
       data: () => ({
@@ -237,7 +240,7 @@ export default {
       this.close()
     }
   },
-  
+
     created(){
         console.log('loaded')
     },
