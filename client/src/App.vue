@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+   <v-app>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <router-link class="navbar-brand" :to="{ name: 'home' }">Mido Admin</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +34,15 @@
         </form>
       </div>
 </nav>
+
     <router-view class="container pt-2" />
-  </div>
+</v-app>
+
+</div>
 </template>
 
 <style>
 
 </style>
+
+
