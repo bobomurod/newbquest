@@ -6,9 +6,9 @@ import Vuetify from 'vuetify'
 import 'bootswatch/dist/litera/bootstrap.css';
 import '../node_modules/vuetify/dist/vuetify.min.css';
 import '@mdi/font/css/materialdesignicons.css';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import App from './App.vue';
 import router from './router';
 
