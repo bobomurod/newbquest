@@ -87,7 +87,7 @@ const GETUSERS_API_URL = 'http://localhost:8081/getAllUsers'
 
 export default {
     name: 'userslist',
-      data: () => ({
+    data: () => ({
     dialog: false,
     headers: [
       {
@@ -241,16 +241,13 @@ export default {
     }
   },
 
-    created(){
-        console.log('loaded')
-    },
-    mounted(){
+    mounted (){
         console.log('mounted')
     },
-    updated(){
+    updated (){
         console.log('updated')
     },
-    destroyed(){
+    destroyed (){
         console.log('destroyed')
     }
 }
