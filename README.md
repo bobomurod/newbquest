@@ -15,7 +15,7 @@ Add JWT-based authentication to a Node/Express/Mongo/Vue app.
   - [x] validate the user
   - [x] check if username in db
   - [x] compare password with hashed password in db
-  - [ ] login attampts rate limiting - not finished
+  - [ ] login attampts rate limiting - not finishez
   - [x] Create and sign a JWT
   - [x] Respond with JWT
 - [x] Create Landing Page
