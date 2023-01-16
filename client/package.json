@@ -23,7 +23,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "@mdi/font": "^3.6.95",
     "@mdi/js": "^3.6.95",
-    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.4",
     "@vue/cli-service": "^5.0.4",
     "@vue/eslint-config-airbnb": "^4.0.0",
